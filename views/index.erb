@@ -1,0 +1,14 @@
+<h3> Your Dictionary </h3>
+
+<h4> Here are the words in your dictionary </h4>
+
+<ul>
+  <% @words.each() do |word| %>
+    <li> <a href = '/defined/<%= word.id() %>'><%= word.name() %></a></li>
+    <% end %>
+</ul>
+
+<form action = '/' method = 'post'>
+  <input id = 'word_input' name = 'word_input' type = 'text' placeholder = 'enter a new word here!'>
+  <button type = 'submit'>Add Word</button>
+</form>

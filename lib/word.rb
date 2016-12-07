@@ -1,6 +1,7 @@
 class Word
   @@words = []
-
+  attr_reader(:word, :meanings)
+  
   define_method(:initialize) do |word|
    @word = word
    @id = @@words.length().+(1)
