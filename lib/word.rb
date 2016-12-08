@@ -6,11 +6,11 @@ class Word
    @word = attributes.fetch(:word)
    @id = @@words.length().+(1)
    @meanings = []
- end
+  end
 
- define_method(:id) do
-   @id
- end
+  define_method(:id) do
+    @id
+  end
 
  define_method(:save) do
     @@words.push(self)
