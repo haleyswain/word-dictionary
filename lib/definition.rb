@@ -1,14 +1,11 @@
 class Definition
-  attr_reader(:definition_1)
+attr_reader :definition, :word_id
+
   @@meanings = []
 
   define_method(:initialize) do |attributes|
     @definition = attributes.fetch(:definition)
     @word_id = @@meanings.length().+(1)
-  end
-
-  define_method(:definition) do
-    @definition
   end
 
   define_method(:save) do
@@ -23,9 +20,6 @@ class Definition
     @@meanings = []
   end
 
-  define_method(:word_id) do
-    @word_id
-  end
 
   define_singleton_method(:find) do |id|
     found_definition = nil

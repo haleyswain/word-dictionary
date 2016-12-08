@@ -30,7 +30,7 @@ describe(".clear") do
 
   describe("#save") do
     it("adds a word to the array of saved words") do
-      test_word = Word.new("it is a plant")
+      test_word = Word.new(:word => "it is a plant")
       test_word.save()
       expect(Word.all()).to(eq([test_word]))
     end
